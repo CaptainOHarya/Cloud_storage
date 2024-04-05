@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cloud_storage?currentSchema=cloud_storage
+    username: postgres
+    password: leo2802
+    driver-class-name: org.postgresql.Driver
+
+# настройки для sprig data jpa
+# при старте не нужно каждый раз добавлять информацию
+sql:
+  init:
+    mode: always
+    continue-on-error: false
+    data-location: classpath:demo_data.sql
+
+
